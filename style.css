@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: 'Founders';
     src: url(/FoundersGroteskCondensed-Bold.ttf);
@@ -179,4 +180,13 @@ body.menu-open {
   }
   .svglang{
     width: 12vw;
+  }
+
+
+  .games{
+    background-image: url('https://img.freepik.com/free-vector/video-game-developer-concept-illustration_114360-5866.jpg?w=740&t=st=1716998034~exp=1716998634~hmac=627ffb165411dab6ce72ac6972b3d0c60d128099cf1e66ac23e897bf83bd553c');
+    width: 50%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
   }
