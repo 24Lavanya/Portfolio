@@ -2,7 +2,7 @@
 
 var tl2 = gsap.timeline({
   scrollTrigger: {
-      trigger: ".adiv",
+      trigger: ".about",
       start: "top top",
       end: "bottom bottom",
       scrub: 1,

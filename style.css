@@ -138,6 +138,17 @@ body.menu-open {
   .aleft,.aright{
     overflow: hidden;
   }
+  .aright-img{
+    width: 100%;
+    height: 100%;
+    background-image: url('./Images/4884170.jpg');
+    background-size: cover;
+  }
+ @media(max-width:766px) {
+  .aright-img{
+    background-image: none
+  }
+ }
   .aleftele{
     /* background: lightcoral; */
     width: 100%;
@@ -163,24 +174,19 @@ body.menu-open {
     width: 30vw;
     align-items: center;
     justify-content: center;
+    /* background-color: aliceblue; */
     justify-items: center;
   }
   .skill-box {
     display: grid;
     grid-template-columns: 2fr 2fr 2fr;
-    justify-items: center;
-    align-items: center;
+    gap:10px;
     object-fit: cover;
   }
   
   
-  .lang {
-    width: 8vw;
-    margin-top: 10px;
-  }
-  .svglang{
-    width: 12vw;
-  }
+
+
 
 
   .games{
@@ -189,4 +195,5 @@ body.menu-open {
     height: 100%;
     background-position: center;
     background-size: cover;
+    background-color: #416e7b;
   }
