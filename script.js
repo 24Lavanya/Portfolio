@@ -6,7 +6,7 @@ var tl2 = gsap.timeline({
       start: "top top",
       end: "bottom bottom",
       scrub: 1,
-      markers: true,
+      // markers: true,
       pin: true,
       endTrigger: "#last"
   },
@@ -55,7 +55,7 @@ var tl = gsap.timeline({
       start: "50% 50%",
       end: "100% 50%",
       scrub: 1,
-      markers: true,
+      // markers: true,
       pin: true,
   },
   
