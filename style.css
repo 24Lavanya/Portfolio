@@ -107,17 +107,19 @@ body.menu-open {
   }
   @media (min-width: 768px) {
     .nav-links {
-        position: static; /* Reset position for larger screens */
-        top: auto; /* Reset top for larger screens */
-        transform: translateY(0); /* Reset transform for larger screens */
-        transition: none; /* Remove transition for larger screens */
+        position: static; 
+        top: auto;
+        transform: translateY(0); 
+        transition: none; 
     }
   
     .nav-links.show-menu {
-        transform: translateY(0); /* Ensure the menu is visible on larger screens */
+        transform: translateY(0);
     }
   }
-
+  .hidden{
+    display: hidden;
+  }
 
   .heading h1:nth-child(2){
     color: transparent;
@@ -192,3 +194,5 @@ body.menu-open {
     background-size: cover;
     background-color: #416e7b;
   }
+
+  

@@ -22,34 +22,36 @@
       
       <div class="home">
            <!-- navbar -->
-        <nav
-          class="nav flex items-center justify-between p-5 font-[Main] text-xl"
-        >
+        <nav class="nav flex justify-between p-5 font-[Main] text-xl">
           <div class="logo">
             <h1 id="first" class="uppercase">Portfolio</h1>
             <h1 class="uppercase">Portfolio</h1>
           </div>
           <div
-            class="nav-links md:static md:min-h-fit absolute z-10  md:w-auto min-h-[70vh] left-0 top-[-100%] w-full flex items-center md:justify-center px-5"
+            class="nav-links md:static md:min-h-fit absolute z-10  md:w-auto min-h-[70vh] left-0 top-[-100%] w-full flex items-center md:justify-center justify-between px-5 bg-zinc-100 md:bg-transparent"
           >
             <ul
               class="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 mb-2"
             >
-              <li><a class="hover:text-red-400" href="#">Home</a></li>
-              <li><a class="hover:text-red-400" href="#">About</a></li>
-              <li><a class="hover:text-red-400" href="#">Skills</a></li>
-              <li><a class="hover:text-red-400" href="#">Funzone</a></li>
-              <li><button class="bg-[#385A64] text-white hover:bg-[#416e7b] px-2 py-1 rounded-full">Contact</button></li>
+              <li><a class="hover:text-[#416e7b]" href="#home">Home</a></li>
+              <li><a class="hover:text-[#416e7b]" href="#about-page">About</a></li>
+              <li><a class="hover:text-[#416e7b]" href="#skills-page">Skills</a></li>
+              <li><a class="hover:text-[#416e7b]" href="#project-page">Projects</a></li>
+              <li><a class="hover:text-[#416e7b]" href="#funzone-page">Funzone</a></li>
+              <li><button class="bg-[#385A64] text-white hover:bg-[#416e7b] px-2 py-1 rounded-full"><a href="#contact">Contact</a></button></li>
             </ul>
           </div>
-          <div class="icon cursor-pointer text-2xl md:hidden absolute right-10 z-20 text-white">
-            <ion-icon onclick="Toggle(this)" name="menu"></ion-icon>
-          </div>
+          <div class="icon cursor-pointer text-2xl md:hidden absolute right-10 z-20 text-black">
+            <ion-icon name="menu" onclick="toggleMenu(this)"></ion-icon>
+        </div>
+        <div class="close cursor-pointer text-2xl md:hidden absolute right-10 z-20 text-red hidden">
+            <ion-icon name="close" onclick="toggleMenu(this)"></ion-icon>
+        </div>
         </nav>
 
 
         <!-- landing page -->
-        <div class="landing flex w-full h-screen text-black font-[Main]">
+        <div class="landing flex w-full h-screen text-black font-[Main]" id="home">
           <div class="leftdiv w-full absolute mt-12 md:static md:w-1/2 md:text-[2.5vw] text-xl flex flex-col justify-center md:items-start items-center text-center md:text-left px-12 leading-none">
               <p class="home-text font-medium">I am Lavanya<br>
                 Full stack developer<br>
@@ -65,7 +67,7 @@
 
        <!-- About -->
         
-        <div class="about mt-10 px-[3vw] z-20 flex items-start flex-col w-full min-h-screen">
+        <div class="about mt-10 px-[3vw] z-20 flex items-start flex-col w-full min-h-screen" id="about-page">
           <div class="heading">
             <h1 class="md:text-[3.7vw] text-4xl font-bold tracking-tight leading-none">About</h1>
             <h1 class="md:text-[3.5vw] text-3xl font-bold tracking-tight leading-none">me.</h1>
@@ -105,7 +107,7 @@
           </div>
         </div>
         <!-- SKILLS -->
-        <div class="skills w-full min-h-screen px-[3vw] mt-10 py-12">
+        <div class="skills w-full min-h-screen px-[3vw] mt-10 py-12" id="skills-page">
           <h1 class="md:text-[3.7vw] text-4xl font-bold tracking-tight leading-none">Skills</h1>
           <div class="skill-box mt-12 md:text-[1.7vw] text-md text-center">
             <div class="language">
@@ -165,7 +167,7 @@
          
 
         <!-- PROJECTS -->
-        <div class="projects w-full text-[#ECECEC]">
+        <div class="projects w-full text-[#ECECEC]" id="project-page">
           <div class="proj-cont h-[400vh] relative">
             <div class="proj-slides sticky flex top-0 left-0 w-full h-[100vh] overflow-x-hidden">
               <div class="slide w-full h-screen flex-shrink-0 flex justify-center items-center bg-[#FF735C]">
@@ -193,7 +195,7 @@
                     <div class="head text-center h-full">
                       <h1 class="mb-2 md:text-[2vw] text-xl">Car rental management system</h1>
                       <div class="proj-img md:w-[60vw] md:h-[60vh]  h-[60vw] m-auto">
-                        <img class="w-full h-full object-fit" src="https://img.freepik.com/free-vector/vehicle-sale-concept-illustration_114360-1634.jpg?w=996&t=st=1718457544~exp=1718458144~hmac=a13522011ae7387932bc115ac87761571f7b3350b3fc8d7a5d290fa88782ca03" alt="">
+                        <a href="https://github.com/24Lavanya/Car-rental-system/" target="_blank"><img class="w-full h-full object-fit" src="https://img.freepik.com/free-vector/vehicle-sale-concept-illustration_114360-1634.jpg?w=996&t=st=1718457544~exp=1718458144~hmac=a13522011ae7387932bc115ac87761571f7b3350b3fc8d7a5d290fa88782ca03" alt=""></a>
                       </div>
                     </div>
                   </div>
@@ -207,7 +209,7 @@
                     <div class="head text-center h-full">
                       <h1 class="mb-2 md:text-[2vw] text-xl">Postwave-Social media application</h1>
                       <div class="proj-img md:w-[60vw] md:h-[60vh]  h-[60vw] m-auto">
-                        <img class="w-full h-full object-fit" src="https://img.freepik.com/free-vector/social-media-background-with-hand-drawn-elements_23-2147820021.jpg?t=st=1718384246~exp=1718387846~hmac=bb27653d9e172133704b276f19b6a6e06d14838ddaf80f61ee14725580f29e18&w=740" alt="">
+                        <a href="https://github.com/24Lavanya/Pinterest-clone/" target="_blank"><img class="w-full h-full object-fit" src="https://img.freepik.com/free-vector/social-media-background-with-hand-drawn-elements_23-2147820021.jpg?t=st=1718384246~exp=1718387846~hmac=bb27653d9e172133704b276f19b6a6e06d14838ddaf80f61ee14725580f29e18&w=740" alt=""></a>
                       </div>
                     </div>
                   </div>
@@ -223,7 +225,7 @@
                     <div class="head text-center h-full">
                       <h1 class="mb-2 md:text-[2vw] text-xl">Hospital management system</h1>
                       <div class="proj-img md:w-[60vw] md:h-[60vh]  h-[60vw] m-auto">
-                        <img class="w-full h-full object-fit" src="https://img.freepik.com/free-vector/medics-working-charts_1262-19836.jpg?t=st=1718384363~exp=1718387963~hmac=bf93efe30c1f26e1b7489def432cb620ccd3284e0c246489cce6b5f3624ecd12&w=1060" alt="">
+                        <a href="https://github.com/24Lavanya/Hospital-project/" target="_blank"><img class="w-full h-full object-fit cursor-pointer" src="https://img.freepik.com/free-vector/medics-working-charts_1262-19836.jpg?t=st=1718384363~exp=1718387963~hmac=bf93efe30c1f26e1b7489def432cb620ccd3284e0c246489cce6b5f3624ecd12&w=1060" alt=""></a>
                       </div>
                     </div>
                   </div>
@@ -243,8 +245,8 @@
 
     <!-- FUNZONE -->
     
-    <div class="funzone w-full h-screen flex relative">
-      <div class="top w-full h-[50vh] absolute flex justify-center overflow-hidden bg-zinc-100">
+    <div class="funzone w-full h-screen flex relative" id="funzone-page">
+      <div class="top w-full h-[50vh] absolute flex justify-center overflow-hidden bg-zinc-100 z-5">
         <div class="top-h uppercase absolute -bottom-[9vw] md:-bottom-[7vw] md:text-[15vw] text-[18vw] leading-none font-bold">Funzone</div>
       </div>
       <div class="mid w-full flex items-center justify-center bg-violet-200">
@@ -252,15 +254,33 @@
           <h1 class="md:text-[2vw] text-2xl text-center underline">Let's have some fun with my games</h1>
           <button class="border-solid border-2 border-violet-800 mt-2 rounded-full px-2 py-1 bg-violet-300 w-full"><a href="./guess the game/index1.html" class="game1 md:text-[3vw] text-xl">Guess the number</a></button>
         <button class="border-solid border-2 border-violet-800 mt-2 rounded-full px-2 py-1 bg-violet-300 w-full"><a href="./RPS/index.html" class="game2 md:text-[3vw] text-xl">Rock, paper, scissor</a></button>
-      <button class="border-solid border-2 border-violet-800 mt-2 rounded-full px-2 py-1 bg-violet-300 w-full"><a href="" class="game3 md:text-[3vw] text-xl">Duck game</a></button>
+      <button class="border-solid border-2 border-violet-800 mt-2 rounded-full px-2 py-1 bg-violet-300 w-full"><a href="https://24lavanya.itch.io/duck-hunt?secret=YRqOHS55cJnM4VkU6uHascnCwss" class="game3 md:text-[3vw] text-xl">Duck game</a></button>
         </div>
       </div>
-      <div class="bottom w-full h-[50vh]  absolute flex justify-center overflow-hidden bg-zinc-100">
+      <div class="bottom w-full h-[50vh]  absolute flex justify-center overflow-hidden bg-zinc-100 z-5">
         <div class="bottom-h uppercase absolute -top-[9vw] md:-top-[8vw] md:text-[15vw] text-[18vw] leading-none font-bold">Funzone</div>
       </div>
     </div>
 
 
+    <!-- CONTACT -->
+    <section id="contact" class="w-full h-screen relative z-100 bg-zinc-100 py-[2vw] px-[1vw] flex flex-col justify-center">
+      <div class="hello text-2xl md:text-[2.5vw] ">
+      <h2>Say Hi!</h2><br>
+      <p>If you have any feedback or questions please feel free to leave a message.</p>
+  </div>
+  <div class="contactbox text-center py-4">
+  <form class="rounded-md mt-6 bg-zinc-200 w-full">
+      <div class="flex gap-3 py-3 text-xl md:text-[1.5vw]"><h1 class="md:w-[10%] w-[20vw]">Name</h1>
+      <input type="text" id="name" name="fname" placeholder="Enter your name" class="md:w-1/2 w-[90vw]"></div>
+      <div class="flex gap-3 py-3 text-xl md:text-[1.5vw]"><h1 class="md:w-[10%] w-[20vw]">Email</h1>
+      <input type="email" id="email" name="mail" placeholder="Enter your email" class="md:w-1/2 w-[90vw]"></div>
+      <div class="flex gap-3 py-3 text-xl md:text-[1.5vw]"><h1 class="md:w-[10%] w-[20vw]">Subject</h1>
+      <textarea id="message" name="subject" placeholder="Leave a message" style="height:200px" class="md:w-1/2 w-[85vw]"></textarea></div>
+      <input type="submit" value="Submit" class="text-white md:mt-8 mt-5 bg-[#385A64] hover:bg-[#416e7b] md:text-[2vw] text-xl px-1 rounded-md">
+  </form>
+</div>
+</section>
 
   </div>
     
