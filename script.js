@@ -3,6 +3,7 @@
 const menuIcon = document.querySelector(".icon ion-icon[name='menu']");
 const closeIcon = document.querySelector(".close ion-icon[name='close']");
 const navLinks=document.querySelector(".nav-links");
+const liElements=document.querySelectorAll(".nav-links li");
 const body = document.body;
 
 menuIcon.addEventListener("click",()=>{
@@ -19,6 +20,14 @@ closeIcon.addEventListener("click",()=>{
   closeIcon.parentElement.classList.toggle("hidden");
 })
 
+liElements.forEach(li => {
+  li.addEventListener("click", () => {
+      navLinks.classList.remove("show-menu");
+      body.classList.remove("menu-open");
+      menuIcon.parentElement.classList.remove("hidden");
+      closeIcon.parentElement.classList.add("hidden");
+  });
+});
 var tl2 = gsap.timeline({
   scrollTrigger: {
       trigger: ".about",
