@@ -6,14 +6,10 @@
     <title>Portfolio</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
-    <script
-    type="module"
-    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-    nomodule
-    src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -54,8 +50,12 @@
         <div class="landing flex w-full h-screen text-black font-[Main]" id="home">
           <div class="leftdiv w-full absolute mt-12 md:static md:w-1/2 md:text-[2.5vw] text-xl flex flex-col justify-center md:items-start items-center text-center md:text-left px-12 leading-none">
               <p class="home-text font-medium">I am Lavanya<br>
-                Full stack developer<br>
-   Interested in game development and animations</p>
+                Full stack developer<br></p><br>
+                <div class="icons "><a href="www.linkedin.com/in/lavanya-laxmi" target="_blank"><i class="ri-linkedin-box-fill cursor-pointer"></i></a>
+                  <a  href="https://github.com/24Lavanya" target="_blank"><i class="ri-github-fill cursor-pointer"></i></a>
+                  <!-- <a href="http://"><i class="ri-instagram-fill cursor-pointer" href="" target="_blank"></i></a> -->
+                  <a  href="#contact"><i class="ri-mail-fill cursor-pointer"></i></a>
+                  </div>
               <button class="text-white md:mt-8 mt-5 bg-[#385A64] hover:bg-[#416e7b] md:text-[1.2vw] text-xl py-1 px-2 rounded-full"><a href="https://drive.google.com/file/d/1h8bP6juVCkcVsQ3swKH1KmBSkEUBiNPH/view">Resume</a></button>
           </div>
           <div class="rightdiv w-full md:w-[50vw]">
@@ -253,16 +253,23 @@
 
 
     <!-- CONTACT -->
-    <section id="contact" class="w-full h-screen relative z-100 bg-zinc-100 py-[2vw] px-[1vw] flex flex-col justify-center">
-      <div class="hello text-2xl md:text-[2.5vw] ">
+    <section id="contact" class="w-full min-h-screen relative z-100 bg-zinc-100 py-[2vw] px-[1vw] flex flex-col justify-center items-center">
+      <div class="hello text-2xl md:text-[2.5vw] text-center">
       <h2>Say Hi!</h2><br>
       <p>If you have any feedback or questions please feel free to contact me.</p>
   </div>
-    <div class="contactbox text-center w-full">
-      <div class="c-1 flex h-[5vh] items-center gap-3 text-xl md:text-[1.7vw] lg:text-[1.7vw]"><ion-icon name="mail-outline"></ion-icon><a href="">laxmilavanya364@gmail.com</a></h1></div>
+  <form action="https://api.web3forms.com/submit" method="post" class="flex flex-col mt-5 px-3 py-5 w-full md:w-1/2">
+    <input type="hidden" name="access_key" value="573c5c80-b4dd-4401-ad06-dc3a568aa02e">
+    <input type="text" name="name" class="border-2 border-zinc-400 mt-2 px-3 py-3" placeholder="Enter your name">
+    <input type="email" name="email" class="border-2 border-zinc-400 mt-2  px-3 py-3" placeholder="Enter your email">
+    <textarea name="message" class="border-2 border-zinc-400  mt-2 px-3 py-3" cols="30" rows="10" placeholder="Your message"></textarea>
+    <button type="submit" class="border-2 w-1/2 m-auto rounded-full text-white mt-2 px-3 py-3 bg-[#F04651] hover:bg-[#FF4F5A]">Submit</button>
+  </form>
+    <!-- <div class="contactbox text-center w-full"> -->
+      <!-- <div class="c-1 flex h-[5vh] items-center gap-3 text-xl md:text-[1.7vw] lg:text-[1.7vw]"><ion-icon name="mail-outline"></ion-icon><a href="">laxmilavanya364@gmail.com</a></h1></div>
       <div class="c-1 flex h-[5vh] items-center gap-3 text-xl md:text-[1.7vw] lg:text-[1.7vw]"><ion-icon name="logo-linkedin"></ion-icon><a href="http://www.linkedin.com/in/lavanya-laxmi">Lavanya_Laxmi</a></h1></div>
-      <div class="c-1 flex h-[5vh] items-center gap-3 text-xl md:text-[1.7vw] lg:text-[1.7vw]"><ion-icon name="logo-github"></ion-icon><a href="https://github.com/24Lavanya">24Lavanya</a></h1></div>
-</div>
+      <div class="c-1 flex h-[5vh] items-center gap-3 text-xl md:text-[1.7vw] lg:text-[1.7vw]"><ion-icon name="logo-github"></ion-icon><a href="https://github.com/24Lavanya">24Lavanya</a></h1></div> -->
+<!-- </div> -->
 </section>
 
   </div>
