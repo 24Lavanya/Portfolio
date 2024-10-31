@@ -20,23 +20,7 @@ height:100%;
 background-color: #fff;
 }
 
-/* .left,.right{
-    z-index: 100;
-}
-.left{
-    background:#385A64;
-}
 
-.lefth,.righth{
-    width: 100%;
-    font-size: 18vw;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-}
-.righth{
-    font-size: 17vw;
-} */
 
 .top{
   width:100%;
@@ -119,7 +103,7 @@ body.menu-open {
     }
   }
   .hidden{
-    display: hidden;
+    display: none;
   }
 
   .heading h1:nth-child(2){
@@ -153,14 +137,6 @@ body.menu-open {
     height: 100%;
   }
 
-
-  /* overflow: hidden; */
-  /* .image {
-    width: 100%;
-    height: 100%;
-    position: sticky;
-    top:0;
-  } */
   .aright img {
     width: 100%;
     height: 100%;
@@ -183,17 +159,12 @@ body.menu-open {
   }
   
   
-
-
-
+  .slide{
+    background: #DFD9E2
+  }
 
   .games{
-    background-image: url('https://img.freepik.com/free-vector/video-game-developer-concept-illustration_114360-5866.jpg?w=740&t=st=1716998034~exp=1716998634~hmac=627ffb165411dab6ce72ac6972b3d0c60d128099cf1e66ac23e897bf83bd553c');
-    width: 50%;
-    height: 100%;
-    background-position: center;
-    background-size: cover;
-    background-color: #416e7b;
+    background: url(https://wallup.net/wp-content/uploads/2017/03/28/446401-Firewatch-video_games-landscape.jpg);
   }
 
   
