@@ -2,13 +2,9 @@
 
 A modern and interactive developer portfolio built using **React** and **GSAP**, designed to deliver a smooth, engaging, and visually appealing user experience.
 
----
-
 ## 🚀 About
 
 This portfolio showcases my work, skills, and projects through a **seamless scrolling experience** combined with **dynamic animations**. Leveraging the power of **GSAP (GreenSock Animation Platform)**, the website provides fluid transitions and an immersive interface that keeps users engaged.
-
----
 
 ## ✨ Features
 
@@ -17,8 +13,6 @@ This portfolio showcases my work, skills, and projects through a **seamless scro
 - 📱 Fully responsive design  
 - 🧩 Modular and reusable React components  
 - 🚀 Optimized for performance  
-
----
 
 ## 🛠️ Tech Stack
 
@@ -34,8 +28,4 @@ This portfolio showcases my work, skills, and projects through a **seamless scro
 ## 🌐 Live Demo
 
 🔗 [View Portfolio](#)  
-<!-- Replace # with your deployed link (Vercel / Netlify) -->
 
----
-
-## 📂 Project Structure
