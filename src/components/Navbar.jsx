@@ -1,12 +1,13 @@
 import { useState } from "react";
 import Button from "./Button";
+import { Link } from "react-router-dom";
+import Logo from "./Logo";
 
 const navItems = [
   { label: "Home", href: "#home" },
   { label: "About", href: "#about-page" },
   { label: "Skills", href: "#skills-page" },
   { label: "Projects", href: "#project-page" },
-  { label: "Funzone", href: "#funzone-page" },
 ];
 
 export default function Navbar() {
@@ -26,14 +27,9 @@ export default function Navbar() {
 
   return (
     <nav className="nav flex justify-between p-5 text-xl">
-      <div className="logo">
-        <img
-          id="first"
-          src="./Images/logo.png"
-          alt="Logo"
-        />
-
-        <img src="./Images/logo.png" alt="Logo" />
+      <div className="logo px-5">
+        <Logo id="first" />
+        <Logo />
       </div>
       <div
         className={`nav-links md:static md:min-h-fit absolute z-10 md:w-auto min-h-[70vh] left-0 w-full flex items-center md:justify-center justify-between px-5 bg-zinc-100 md:bg-transparent ${
@@ -44,8 +40,8 @@ export default function Navbar() {
           {navItems.map((item) => (
             <li key={item.href}>
               <a
-                className="hover:text-[#416e7b]"
                 href={item.href}
+                className="hover:text-[#416e7b]"
                 onClick={closeMenu}
               >
                 {item.label}
@@ -73,7 +69,7 @@ export default function Navbar() {
       </button>
       <button
         aria-label="Close menu"
-        className={`close cursor-pointer text-2xl md:hidden absolute right-10 z-20 text-red ${isOpen ? "" : "hidden"}`}
+        className={`close cursor-pointer text-2xl md:hidden absolute right-10 z-20 text-[#F04651] ${isOpen ? "" : "hidden"}`}
         type="button"
         onClick={toggleMenu}
       >

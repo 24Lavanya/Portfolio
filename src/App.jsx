@@ -1,7 +1,6 @@
 import Navbar from "./components/Navbar";
 import About from "./sections/About";
 import Contact from "./sections/Contact";
-import Funzone from "./sections/Funzone";
 import Home from "./sections/Home";
 import Projects from "./sections/Projects";
 import Skills from "./sections/Skills";
@@ -18,7 +17,6 @@ export default function App() {
         <About />
         <Skills />
         <Projects />
-        <Funzone />
         <Contact />
       </div>
     </div>

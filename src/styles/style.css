@@ -76,20 +76,36 @@ nav {
 
 .logo {
   width: 100px;
-  height: 56px;
+  height: 46px;
   overflow: hidden;
 }
 
-.logo img {
+.logo-mark {
   width: 100px;
-  height: 56px;
+  height: 46px;
   object-fit: contain;
   display: block;
   transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
 }
 
+.logo-mark .letter {
+  color: #f04651;
+  font-weight: 800;
+}
+
+.logo-mark .slash {
+  color: #385a64;
+  opacity: 0.8;
+}
+
+.logo-mark .bracket {
+  color: #385a64;
+  font-weight: 500;
+}
+
+
 .logo:hover #first {
-  margin-top: -56px;
+  margin-top: -46px;
 }
 
 .rightdiv img {
@@ -427,4 +443,251 @@ body.menu-open {
 
 .games {
   background: url("https://wallup.net/wp-content/uploads/2017/03/28/446401-Firewatch-video_games-landscape.jpg");
+}
+
+.contact-section {
+  overflow: hidden;
+  background: #f8fafb;
+  color: #2d3142;
+  border-top: 1px solid #e4e4e7;
+}
+
+.contact-shell {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.9fr) minmax(300px, 1.1fr);
+  gap: 40px;
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  align-items: center;
+}
+
+.contact-copy {
+  position: relative;
+  min-height: 460px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-kicker {
+  color: #385a64;
+  font-size: 15px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.contact-copy h2 {
+  margin-top: 12px;
+  font-size: clamp(52px, 8vw, 118px);
+  font-weight: 800;
+  line-height: 0.9;
+}
+
+.contact-copy h2::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 4px;
+  margin-top: 18px;
+  border-radius: 999px;
+  background: #f04651;
+  transform-origin: left;
+  animation: contact-line 1.2s ease both;
+}
+
+.contact-copy p {
+  max-width: 520px;
+  margin-top: 24px;
+  color: #52525b;
+  font-size: clamp(18px, 2vw, 24px);
+  line-height: 1.4;
+}
+
+.contact-orbit {
+  position: absolute;
+  right: 10%;
+  bottom: 8%;
+  width: 170px;
+  height: 170px;
+  border: 1px solid #d4d4d8;
+  border-radius: 8px;
+  animation: contact-float 5s ease-in-out infinite;
+}
+
+.contact-orbit span {
+  position: absolute;
+  display: block;
+  width: 18px;
+  height: 18px;
+  border-radius: 2px;
+  background: #385a64;
+}
+
+.contact-orbit span:nth-child(1) {
+  top: -9px;
+  left: 50%;
+}
+
+.contact-orbit span:nth-child(2) {
+  right: 12px;
+  bottom: 30px;
+  background: #f04651;
+}
+
+.contact-orbit span:nth-child(3) {
+  left: 20px;
+  bottom: 18px;
+  background: #fff;
+  border: 1px solid rgba(56, 90, 100, 0.22);
+}
+
+.contact-form {
+  position: relative;
+  display: grid;
+  gap: 16px;
+  border: 1px solid rgba(56, 90, 100, 0.18);
+  border-radius: 8px;
+  padding: clamp(20px, 3vw, 34px);
+  background: #fff;
+  box-shadow: 0 20px 50px rgba(45, 49, 66, 0.08);
+  animation: contact-rise 0.8s ease both;
+}
+
+.contact-botcheck {
+  display: none;
+}
+
+.contact-form label {
+  display: grid;
+  gap: 8px;
+}
+
+.contact-form label span {
+  font-size: 14px;
+  font-weight: 800;
+  color: #385a64;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid #d4d4d8;
+  border-radius: 8px;
+  padding: 14px 16px;
+  background: #fff;
+  color: #2d3142;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #385a64;
+  box-shadow: 0 0 0 4px rgba(56, 90, 100, 0.12);
+  transform: translateY(-2px);
+}
+
+.contact-form input:invalid:not(:placeholder-shown),
+.contact-form textarea:invalid:not(:placeholder-shown) {
+  border-color: #f04651;
+  box-shadow: 0 0 0 4px rgba(240, 70, 81, 0.1);
+}
+
+.contact-form button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  justify-self: start;
+  border-radius: 8px;
+  padding: 14px 20px;
+  background: #f04651;
+  color: #fff;
+  font-weight: 800;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.contact-form button:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+  transform: none;
+}
+
+.contact-form button:hover {
+  transform: translateY(-2px);
+  background: #385a64;
+}
+
+.contact-status {
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.contact-status--loading {
+  border: 1px solid #d4d4d8;
+  background: #f8fafb;
+  color: #385a64;
+}
+
+.contact-status--success {
+  border: 1px solid rgba(56, 90, 100, 0.22);
+  background: rgba(56, 90, 100, 0.08);
+  color: #385a64;
+}
+
+.contact-status--error {
+  border: 1px solid rgba(240, 70, 81, 0.28);
+  background: rgba(240, 70, 81, 0.08);
+  color: #b4232d;
+}
+
+@keyframes contact-rise {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes contact-line {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+@keyframes contact-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@media (max-width: 900px) {
+  .contact-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-copy {
+    min-height: auto;
+  }
+
+  .contact-orbit {
+    display: none;
+  }
 }

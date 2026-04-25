@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import projects from "../data/projects";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -28,7 +29,7 @@ export default function usePortfolioAnimations() {
         end: "bottom bottom",
         scrub: 2,
       },
-      xPercent: "-300",
+      xPercent: projects.length * -100,
       ease: "power4",
     });
 
