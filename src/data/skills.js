@@ -30,7 +30,7 @@ const skills = [
     skills: ["Component Architecture", "Responsive Design", "Performance Optimization", "Memoization"],
   },
   {
-    title: "Tools & Workflow",
+    title: "Tools",
     icon: "ri-tools-line",
     description: "Using modern development tools for version control, testing, and debugging.",
     skills: ["Git", "Postman", "Firebase", "Strapi"],
