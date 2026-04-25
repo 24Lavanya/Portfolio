@@ -5,7 +5,7 @@ export default function SkillItem({ description, icon = "ri-stack-line", skills 
         <div className="skill-card__icon">
           <i className={icon} aria-hidden="true" />
         </div>
-        <h3>{title}</h3>
+        <h3 className="md:tex-4xl text-xs">{title}</h3>
       </div>
       <p>{description}</p>
       <div className="skill-tags">

@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Button from "./Button";
-import { Link } from "react-router-dom";
 import Logo from "./Logo";
 
 const navItems = [
@@ -26,22 +25,24 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="nav flex justify-between p-5 text-xl">
-      <div className="logo px-5">
+    <nav className="nav relative z-40 flex items-center justify-between px-5 py-4 text-base md:px-10 md:text-xl">
+      <div className="logo">
         <Logo id="first" />
         <Logo />
       </div>
       <div
-        className={`nav-links md:static md:min-h-fit absolute z-10 md:w-auto min-h-[70vh] left-0 w-full flex items-center md:justify-center justify-between px-5 bg-zinc-100 md:bg-transparent ${
-          isOpen ? "show-menu" : ""
+        className={`fixed left-4 right-4 top-20 z-30 rounded-3xl border border-black/10 bg-white/90 p-5 shadow-2xl shadow-black/10 backdrop-blur-xl transition-all duration-300 md:pointer-events-auto md:static md:z-auto md:translate-y-0 md:rounded-none md:border-0 md:bg-transparent md:p-0 md:opacity-100 md:shadow-none md:backdrop-blur-none ${
+          isOpen
+            ? "pointer-events-auto translate-y-0 opacity-100"
+            : "pointer-events-none -translate-y-4 opacity-0"
         }`}
       >
-        <ul className="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-8 mb-2">
+        <ul className="flex flex-col gap-2 md:flex-row md:items-center md:gap-[4vw]">
           {navItems.map((item) => (
             <li key={item.href}>
               <a
                 href={item.href}
-                className="hover:text-[#416e7b]"
+                className="block rounded-2xl px-4 py-3 text-lg font-medium text-zinc-800 transition hover:bg-zinc-100 hover:text-[#385A64] md:rounded-none md:px-0 md:py-0 md:text-xl md:hover:bg-transparent"
                 onClick={closeMenu}
               >
                 {item.label}
@@ -50,7 +51,7 @@ export default function Navbar() {
           ))}
           <li>
             <Button
-              className="bg-[#385A64] text-white hover:bg-[#416e7b] px-1 py-1 rounded-md"
+              className="mt-2 block rounded-2xl bg-[#385A64] px-4 py-3 text-center text-lg font-medium text-white transition hover:bg-[#416e7b] md:mt-0 md:rounded-md md:px-3 md:py-2 md:text-xl"
               href="#contact"
               onClick={closeMenu}
             >
@@ -60,20 +61,13 @@ export default function Navbar() {
         </ul>
       </div>
       <button
-        aria-label="Open menu"
-        className={`icon cursor-pointer text-2xl md:hidden absolute right-10 z-20 text-black ${isOpen ? "hidden" : ""}`}
+        aria-label={isOpen ? "Close menu" : "Open menu"}
+        aria-expanded={isOpen}
+        className="grid h-11 w-11 place-items-center rounded-full border border-black/10 bg-white/80 text-2xl text-zinc-900 shadow-sm backdrop-blur transition hover:bg-zinc-950 hover:text-white md:hidden"
         type="button"
         onClick={toggleMenu}
       >
-        <i className="ri-menu-line" />
-      </button>
-      <button
-        aria-label="Close menu"
-        className={`close cursor-pointer text-2xl md:hidden absolute right-10 z-20 text-[#F04651] ${isOpen ? "" : "hidden"}`}
-        type="button"
-        onClick={toggleMenu}
-      >
-        <i className="ri-close-line" />
+        <i className={isOpen ? "ri-close-line" : "ri-menu-3-line"} />
       </button>
     </nav>
   );
